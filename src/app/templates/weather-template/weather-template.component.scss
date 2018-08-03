@@ -1,12 +1,13 @@
-@import "../../assets/sass/settings/settings";
-@import "../../assets/sass/grid/grid-module";
+@import "../../../assets/sass/settings/settings";
+@import "../../../assets/sass/grid/grid-module";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900');
 
 .weather-card {
-  height: 80vh;
+  height: 800px;
   max-width: 500px;
   margin: 40px auto;
   background: #fff;
+  border-radius: $global-lg-radius;
   // border-radius: 20px;
   box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
   overflow: hidden;
@@ -14,7 +15,7 @@
   z-index: 90;
   .top {
     position: relative;
-    height: 250px;
+    height: 400px;
     width: 100%;
     overflow: hidden;
     background: url("https://s-media-cache-ak0.pinimg.com/564x/cf/1e/c4/cf1ec4b0c96e59657a46867a91bb0d1e.jpg") no-repeat;
@@ -22,74 +23,134 @@
     background-position: center center;
     text-align: center;
     .wrapper {
-      padding: 30px;
+      padding: $global-padding;
       position: relative;
       z-index: 1;
-      .mynav {
-        height: 20px;
-        .lnr {
-          color: #fff;
-          font-size: 20px;
+      .mat-toolbar {
+        background: transparent;
+        .spacer {
+          flex: 1 1 auto;
         }
-        .lnr-chevron-left {
-          display: inline-block;
-          float: left;
-        }
-        .lnr-cog {
-          display: inline-block;
-          float: right;
-        }
-      }
-      .heading {
-        margin-top: 20px;
-        font-size: 35px;
-        font-weight: 400;
-        color: #fff;
-      }
-      .location {
-        margin-top: 20px;
-        font-size: 21px;
-        font-weight: 400;
-        color: #fff;
-      }
-      .temp {
-        margin-top: 20px;
-        a{
-          text-decoration: none;
-          color: #fff;
-          .temp-type{
-            font-size: 85px;
+        .forecast {
+          padding-top: $global-padding;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+
+          color: $white;
+          text-align: left;
+          .skyView {
+            font-size: 40px;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 10px;
+          }
+          .temp {
+            margin: 0;
+            .temp-type {
+              font-size: 20px;
+              color: #fff;
+            }
+
+            .temp-value {
+              display: inline-block;
+              font-size: 30px;
+              font-weight: 400;
+              color: #fff;
+            }
+            .deg {
+              display: inline-block;
+              font-size: 10px;
+              font-weight: 400;
+              color: #fff;
+              vertical-align: top;
+              margin-top: 0px;
+              padding: 0 1px;
+            }
           }
         }
-        .temp-value {
-          display: inline-block;
-          font-size: 85px;
-          font-weight: 600;
-          color: #fff;
-        }
-        .deg {
-          display: inline-block;
-          font-size: 35px;
-          font-weight: 600;
+        .location {
+          margin-top: 0;
+          font-size: 14px;
+          font-weight: 400;
           color: #fff;
           vertical-align: top;
-          margin-top: 10px;
+          span {
+            margin-top: -20px;
+            line-height: 2;
+            vertical-align: top;
+            margin-left: 5px;
+          }
         }
       }
+
     }
-    &:after {
-      content: "";
-      height: 100%;
-      width: 100%;
-      display: block;
+    .temp-selector {
       position: absolute;
-      top: 0;
-      left: 0;
-      background: rgba(0,0,0, 0.5);
+      bottom: 0;
     }
+    //  .mynav {
+    //    height: 20px;
+    //    .lnr {
+    //      color: #fff;
+    //      font-size: 20px;
+    //    }
+    //    .lnr-chevron-left {
+    //      display: inline-block;
+    //      float: left;
+    //    }
+    //    .lnr-cog {
+    //      display: inline-block;
+    //      float: right;
+    //    }
+    //  }
+    //  .heading {
+    //    margin-top: 20px;
+    //    font-size: 35px;
+    //    font-weight: 400;
+    //    color: #fff;
+    //  }
+    //  .location {
+    //    margin-top: 20px;
+    //    font-size: 14px;
+    //    font-weight: 400;
+    //    color: #fff;
+    //  }
+    //  .temp {
+    //    margin-top: 20px;
+    //
+    //      .temp-type{
+    //        font-size: 85px;
+    //      }
+    //
+    //    .temp-value {
+    //      display: inline-block;
+    //      font-size: 85px;
+    //      font-weight: 600;
+    //      color: #fff;
+    //    }
+    //    .deg {
+    //      display: inline-block;
+    //      font-size: 35px;
+    //      font-weight: 600;
+    //      color: #fff;
+    //      vertical-align: top;
+    //      margin-top: 10px;
+    //    }
+    //  }
+    //}
+    //&:after {
+    //  content: "";
+    //  height: 100%;
+    //  width: 100%;
+    //  display: block;
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  background: rgba(0,0,0, 0.5);
+    //}
   }
   .bottom {
-    padding: 0 30px;
+    padding: 0;
     background: #fff;
     .wrapper {
       .forecast {
@@ -179,3 +240,5 @@
     }
   }
 }
+
+

@@ -1,0 +1,67 @@
+<div class="weather-card one">
+    <div class="top">
+        <div class="wrapper">
+            <mat-toolbar>
+        <span class="forecast">
+          <div class="skyView">Sunny</div>
+          <p class="temp">
+        <span class="temp-value">34</span><span class="deg">0</span><span class="temp-type">C</span>
+      </p>
+        </span>
+                <span class="spacer"></span>
+                <span>
+          <div class="location"><mat-icon>location_on</mat-icon> <span>Kenilworth</span></div>
+        </span>
+            </mat-toolbar>
+            <div class="temp-selector">
+                <mat-slide-toggle
+                        class="example-margin">
+                </mat-slide-toggle>
+            </div>
+            <div class="weather-icon"></div>
+
+            <div class="mynav">
+
+            </div>
+
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="wrapper">
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                         <span class="icon-weather"></span>friday
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Type your name and age
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+
+                    <mat-form-field>
+                        <input matInput placeholder="First name">
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input matInput placeholder="Age">
+                    </mat-form-field>
+                </mat-expansion-panel>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Self aware panel
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p>I'm visible because I am open</p>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+        <app-weather-icons></app-weather-icons>
+
+    </div>
+</div>

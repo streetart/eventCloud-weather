@@ -8,13 +8,18 @@
 
 // Define the theme.
 $candy-app-primary: mat-palette($mat-indigo);
-$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$candy-app-accent:  mat-palette($black-6-opacity);
 $candy-app-theme:   mat-light-theme($candy-app-primary, $candy-app-accent);
 
 // Include the theme styles for only specified components.
 @include mat-core-theme($candy-app-theme);
 @include mat-button-theme($candy-app-theme);
 @include mat-checkbox-theme($candy-app-theme);
+@include mat-toolbar-theme($candy-app-accent);
+.mat-toolbar.mat-primary {
+  background: transparent !important;
+
+}
 @media screen and (max-width: 599px) {
 
   .mat-toolbar-row, .mat-toolbar-single-row {

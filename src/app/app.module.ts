@@ -23,7 +23,9 @@ import {WeatherIconsComponent} from './components/weather-icons/weather-icons.co
 import {AppMaterialModule} from './shared/material.module';
 import { GraphsComponent } from './components/graphs/graphs.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
-import { FooterComponent } from './components/footer/footer.component'
+import { FooterComponent } from './components/footer/footer.component';
+import { BackgroundComponent } from './components/background/background.component';
+import { WeatherTemplateComponent } from './templates/weather-template/weather-template.component'
 
 
 @NgModule({
@@ -53,7 +55,9 @@ import { FooterComponent } from './components/footer/footer.component'
         WeatherIconsComponent,
         GraphsComponent,
         SearchBarComponent,
-        FooterComponent
+        FooterComponent,
+        BackgroundComponent,
+        WeatherTemplateComponent
 
     ],
 

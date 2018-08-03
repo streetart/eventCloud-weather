@@ -14,8 +14,9 @@ import {GraphsComponent} from '../components/graphs/graphs.component';
 })
 export class WeatherListComponent implements OnInit {
   @Input('city') cityName: String;
+  @Input('')
   @Input('WeatherForecastList') weathers: any;
-    @Input('GrapItem') graph: GraphsComponent;
+  @Input('GrapItem') graph: GraphsComponent;
   errorMessage: string;
  // weathers: any[];
 

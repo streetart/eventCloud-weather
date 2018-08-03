@@ -5,15 +5,16 @@ import { WeatherSearchComponent } from './weather/weather-search.component';
 import { WeatherTodayComponent } from './weather-today/weather-today.component';
 import {WeatherListComponent} from './weather/weather-list.component';
 import {BaseComponent} from './templates/base/base.component';
+import {WeatherTemplateComponent} from './templates/weather-template/weather-template.component';
 
 const routes: Routes = [
   // { path: '', component: WeatherSearchComponent},
-    {path: 'base', component: BaseComponent},
-    { path: '', redirectTo: '/forecast', pathMatch: 'full' },
+  //   { path: 'forecast', redirectTo: '/forecast', pathMatch: 'full' },
   { path: 'list', component: WeatherListComponent},
   { path: 'today', component: WeatherTodayComponent},
   { path: 'forecast', component: WeatherSearchComponent },
   { path: 'weather', component: WeatherTodayComponent },
+    {path: ' weather-template ', component: WeatherTemplateComponent },
 
 
   { path: '**', component: PageNotFoundComponent }

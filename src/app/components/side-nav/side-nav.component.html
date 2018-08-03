@@ -1,37 +1,41 @@
-<mat-sidenav-container fullscreen role="main">
-    <mat-sidenav #sidenav position="start">
-        <mat-nav-list>
-            <a mat-list-item>
-                <mat-icon mat-list-icon>home</mat-icon>
-                <span mat-line>home</span>
-            </a>
 
-            <a mat-list-item>
-                <mat-icon mat-list-icon>backup</mat-icon>
-                <span mat-line>Backup</span>
-            </a>
-        </mat-nav-list>
-    </mat-sidenav>
-    <mat-toolbar color="primary">
-        <!--<button mat-icon-button (click)="sidenav.open()" fxHide="false" fxHide.gt-sm>-->
+    <mat-sidenav-container fullscreen role="main">
+        <mat-sidenav #sidenav position="start">
+            <mat-nav-list>
+                <a mat-list-item routerLink="list">
+                    <mat-icon mat-list-icon>weather</mat-icon>
+                    <span mat-line>home</span>
+                </a>
+
+                <a mat-list-item>
+                    <mat-icon mat-list-icon>backup</mat-icon>
+                    <span mat-line>Backup</span>
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-toolbar color="primary">
+            <!--<button mat-icon-button (click)="sidenav.open()" fxHide="false" fxHide.gt-sm>-->
             <!--<mat-icon>menu</mat-icon>-->
-        <!--</button>-->
-        <span>
-        <div class="e-logo"  (click)="sidenav.open()" fxHide="false" fxHide.gt-sm>
+            <!--</button>-->
+            <span>
+        <div class="e-logo" (click)="sidenav.open()" fxHide="false" fxHide.gt-sm>
         <img src="../../../assets/images/eventCloud-branding/eventcloud-logo-horizontal.png">
     </div>
     </span>
-        <span class="example-spacer"></span>
-
-        <span>
+            <span class="example-spacer"></span>
+            <span>
         </span>
-    </mat-toolbar>
+        </mat-toolbar>
+<app-background>
+    <div content>
+        <app-weather-search></app-weather-search>
+        <app-footer></app-footer>
+    </div>
+
+</app-background>
 
 
-<app-weather-search></app-weather-search>
-<app-footer></app-footer>
 
 
-
-</mat-sidenav-container>
+    </mat-sidenav-container>
 

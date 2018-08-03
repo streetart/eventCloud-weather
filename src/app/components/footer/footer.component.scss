@@ -140,8 +140,9 @@
 }
 
 footer{
-  position: fixed;
+  position: absolute;
   bottom: 0;
+  z-index: 80;
 }
 
 @media (max-height:800px){

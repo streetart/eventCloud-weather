@@ -11,7 +11,11 @@
   height: 30px;
   margin-top: 5px;
 }
-
+.mat-toolbar.mat-primary {
+  background: transparent !important;
+  color: #fff;
+  z-index: 30 !important;
+}
 .mat-drawer {
   min-width: 300px;
 }
@@ -19,5 +23,11 @@
 
   .mat-toolbar-row, .mat-toolbar-single-row {
     height: 62px !important;
+    background: transparent !important;
   }
+}
+
+
+.mat-drawer-container{
+background: transparent;
 }

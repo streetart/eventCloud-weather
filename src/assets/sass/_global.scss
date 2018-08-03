@@ -20,13 +20,12 @@ $color-header: #22313F;
 $color-button: #673ab7;
 $color-placeholder: #EEE;
 $btn-material-size: 60px;
-html,
-body {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-}
 
+html {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+}
 body {
   font-family: 'Roboto', sans-serif;
   color: #2d2d2d;

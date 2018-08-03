@@ -5,8 +5,9 @@
   height: 100%;
   background: rgba(0, 0, 0, .9);
   display: none;
-  z-index: 20;
+  z-index: 990;
   overflow: hidden;
+  top: 0;
 }
 
 input[type="search"] {
@@ -49,6 +50,7 @@ input[type="search"]:focus {
   cursor: pointer;
   right: 19px;
   top: 19px;
+  z-index: 9000;
 }
 
 .rtoc {
@@ -71,6 +73,7 @@ input[type="search"]:focus {
 }
 
 .search_container {
+  z-index: 100;
   @include r(320)  {
     input[type="search"] {
       font-size: 32px;

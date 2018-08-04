@@ -25,7 +25,8 @@ import { GraphsComponent } from './components/graphs/graphs.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BackgroundComponent } from './components/background/background.component';
-import { WeatherTemplateComponent } from './templates/weather-template/weather-template.component'
+import { WeatherTemplateComponent } from './templates/weather-template/weather-template.component';
+import { WeeklyGraphComponent } from './components/weekly-graph/weekly-graph.component'
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { WeatherTemplateComponent } from './templates/weather-template/weather-t
         SearchBarComponent,
         FooterComponent,
         BackgroundComponent,
-        WeatherTemplateComponent
+        WeatherTemplateComponent,
+        WeeklyGraphComponent
 
     ],
 
